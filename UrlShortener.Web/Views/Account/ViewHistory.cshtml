@@ -1,0 +1,23 @@
+﻿@model System.Collections.Generic.IEnumerable<UrlShortener.Data.Url>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3 well">
+        <table class="table table-bordered">
+            <tr>
+                <th>Url</th>
+                <th>Views</th>
+            </tr>
+            @foreach (var url in Model)
+            {
+                <tr>
+                    <td>
+                        <a href="@url.OriginalUrl">@url.OriginalUrl</a>
+                    </td>
+                    <td>
+                        @url.Views
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
